@@ -1,0 +1,14 @@
+[Unit]
+Description=Script Daemon For Test Environment Variables
+
+[Service]
+Environment="FOO=foo"
+EnvironmentFile=/etc/test_env_service/var_file
+
+Type=simple
+User=lianyz
+ExecStart=/usr/local/bin/test_env_service ${FOO} $Foo $FILE_VAR1 ${FILE_VAR2}
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

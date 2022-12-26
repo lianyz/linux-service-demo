@@ -1,0 +1,12 @@
+#!/bin/bash
+
+a=1
+while true
+do
+    printf -v list '%s,' "$@"
+    echo "${list%,}"
+    echo "$a sleeping..."
+    sleep 10
+
+    let a++
+done

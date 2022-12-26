@@ -1,0 +1,2 @@
+FILE_VAR1="Variable 1 from environment file"
+FILE_VAR2="Variable 2 from environment file"
